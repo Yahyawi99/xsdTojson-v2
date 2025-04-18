@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { XMLParser, XMLBuilder, XMLValidator } from "fast-xml-parser";
+import { XMLParser } from "fast-xml-parser";
 
 const app = new Hono();
 
@@ -21,7 +21,6 @@ app.post("/api/v2/convert", async (c) => {
 
   return c.json({
     ok: true,
-    message: "Hello Hono!",
     output,
   });
 });
